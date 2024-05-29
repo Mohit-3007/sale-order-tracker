@@ -8,6 +8,7 @@ import {
 import RootLayout from './layout/RootLayout';
 import DashBoard from './Pages/DashBoard';
 import Create from './Pages/Create';
+import Signup from './Pages/Signup';
 
 
 const router = createBrowserRouter(
@@ -15,6 +16,7 @@ const router = createBrowserRouter(
     <Route path="/" element={<RootLayout />}>
       <Route index element={<DashBoard />} />
       <Route path="create" element={<Create />} />
+      <Route path="signup" element={<Signup />} />
     </Route>
   )
 )
