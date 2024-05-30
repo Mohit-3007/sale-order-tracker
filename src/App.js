@@ -9,6 +9,7 @@ import RootLayout from './layout/RootLayout';
 import DashBoard from './Pages/DashBoard';
 import Create from './Pages/Create';
 import Signup from './Pages/Signup';
+import Login from './Pages/Login';
 
 
 const router = createBrowserRouter(
@@ -17,6 +18,7 @@ const router = createBrowserRouter(
       <Route index element={<DashBoard />} />
       <Route path="create" element={<Create />} />
       <Route path="signup" element={<Signup />} />
+      <Route path="login" element={<Login />} />
     </Route>
   )
 )

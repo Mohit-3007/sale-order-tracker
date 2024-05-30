@@ -11,7 +11,7 @@ import {
   AlertIcon,
   Stack,
 } from '@chakra-ui/react';
-import { json, redirect, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 // import { Link } from 'react-router-dom';
 
 const Signup = () => {
@@ -27,6 +27,10 @@ const Signup = () => {
 
   const handleChange = e => {
     const { name, value } = e.target;
+    setErrors({
+      ...errors,
+      [name]: ''
+    })
     setFormData({
       ...formData,
       [name]: value,
@@ -61,45 +65,41 @@ const Signup = () => {
     }
 
     //check local data
-    if(localStorage.getItem('users')){
-        const users = JSON.parse(localStorage.getItem('users'));
+    if(Object.keys(newErrors).length === 0 && localStorage.getItem('users')){
+      const users = JSON.parse(localStorage.getItem('users'));
+      console.log(users)
+      const isUser = users.find(e => {
+        return e.username === formData.username
+      })
+      const isEmail = users.find(e => {
+        return e.email === formData.email
+      })
 
-        console.log(users)
-
-        const isUser = users.find(e => {
-           return e.username === formData.username
-        })
-        const isEmail = users.find(e => {
-            return e.email === formData.email
-        })
-
-        if(isUser) newErrors.username = 'Username is not available';
-        if(isEmail) newErrors.email = 'Email Id already exist';
-        
-
+      if(isUser) newErrors.username = 'Username is not available';
+      if(isEmail) newErrors.email = 'Email Id already exist';
     }
 
     setErrors(newErrors);
 
     // If there are no errors, proceed with form submission
     if (Object.keys(newErrors).length === 0) {
-        console.log(formData);
-        const localData = localStorage.getItem('user') || [];
-        const data = {
-            username: formData.username,
-            email: formData.email,
-            password: formData.password
-        }
-        localData.push(data);
-        localStorage.setItem('users', JSON.stringify(localData));
+      console.log(formData);
+      const localData = localStorage.getItem('user') || [];
+      const data = {
+        username: formData.username,
+        email: formData.email,
+        password: formData.password
+      }
+      localData.push(data);
+      localStorage.setItem('users', JSON.stringify(localData));
 
 
-      setFormData({
-        username: '',
-        email: '',
-        password: '',
-        retypePassword: ''
-      });
+    setFormData({
+      username: '',
+      email: '',
+      password: '',
+      retypePassword: ''
+    });
 
 
     console.log("redirecting to dashboard");
@@ -117,78 +117,76 @@ const Signup = () => {
     <Box maxW="400px" mx="auto" mt="20" p="4">
       <form onSubmit={handleSubmit}>
         <Stack spacing="4">
-            <FormControl mt={4} isInvalid={errors.username}>
+          <FormControl mt={4} isInvalid={errors.username}>
             <FormLabel htmlFor="username">Username</FormLabel>
             <Input
-                type="text"
-                id="username"
-                name="username"
-                placeholder="Enter your username"
-                value={formData.username}
-                onChange={handleChange}
+              type="text"
+              id="username"
+              name="username"
+              placeholder="Enter your username"
+              value={formData.username}
+              onChange={handleChange}
             />
             {errors.username && (
-                <Alert status="error">
-                <AlertIcon />
-                {errors.username}
-                </Alert>
+              <Alert status="error">
+              <AlertIcon />
+              {errors.username}
+              </Alert>
             )}
-            </FormControl>
+          </FormControl>
             <FormControl mt={4} isInvalid={errors.email}>
             <FormLabel htmlFor="email">Email</FormLabel>
             <Input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="Enter your email"
-                value={formData.email}
-                onChange={handleChange}
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email"
+              value={formData.email}
+              onChange={handleChange}
             />
             {errors.email && (
-                <Alert status="error">
-                <AlertIcon />
-                {errors.email}
-                </Alert>
+              <Alert status="error">
+              <AlertIcon />
+              {errors.email}
+              </Alert>
             )}
-            </FormControl>
-            <FormControl mt={4} isInvalid={errors.password}>
+          </FormControl>
+          <FormControl mt={4} isInvalid={errors.password}>
             <FormLabel htmlFor="password">Password</FormLabel>
             <Input
-                type="password"
-                id="password"
-                name="password"
-                placeholder="Enter your password"
-                value={formData.password}
-                onChange={handleChange}
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Enter your password"
+              value={formData.password}
+              onChange={handleChange}
             />
             {errors.password && (
-                <Alert status="error">
-                <AlertIcon />
-                {errors.password}
-                </Alert>
+              <Alert status="error">
+              <AlertIcon />
+              {errors.password}
+              </Alert>
             )}
-            </FormControl>
-            <FormControl mt={4} isInvalid={errors.retypePassword}>
+          </FormControl>
+          <FormControl mt={4} isInvalid={errors.retypePassword}>
             <FormLabel htmlFor="retypePassword">Retype Password</FormLabel>
             <Input
-                type="password"
-                id="retypePassword"
-                name="retypePassword"
-                placeholder="Retype your password"
-                value={formData.retypePassword}
-                onChange={handleChange}
+              type="password"
+              id="retypePassword"
+              name="retypePassword"
+              placeholder="Retype your password"
+              value={formData.retypePassword}
+              onChange={handleChange}
             />
             {errors.retypePassword && (
-                <Alert status="error">
-                <AlertIcon />
-                {errors.retypePassword}
-                </Alert>
+              <Alert status="error">
+              <AlertIcon />
+              {errors.retypePassword}
+              </Alert>
             )}
-            </FormControl>
-            <Button mt={4} colorScheme="teal" type="submit">
-            Sign Up
-            </Button>
-          </Stack>
+          </FormControl>
+          <Button mt={4} colorScheme="teal" type="submit">Sign Up</Button>
+        </Stack>
       </form>
       <Text mt={4}>
         If you already have an account,
