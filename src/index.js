@@ -5,36 +5,24 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import * as serviceWorker from './serviceWorker';
 import { menuTheme } from './components/Customization/menuTheme';
+import { QueryClient, QueryClientProvider } from 'react-query';
 
-const colors= {
-  brand: {
-    700: '#2977f2',
-    600: '#337df2',
-  }
-}
 
-const fonts = {
-  body: 'Tohama',
-  heading: 'Courier New'
-}
-
+const queryClient = new QueryClient();
 const components = {
   Menu: menuTheme,
 }
-
-// const theme = extendTheme({ colors, fonts });
 const theme = extendTheme({ components });
-// const theme = extendTheme();
-
-
 const container = document.getElementById('root');
 const root = ReactDOM.createRoot(container);
 
 root.render(
   <StrictMode>
     <ChakraProvider theme={theme}>
-      <ColorModeScript />
-      <App />
+      <QueryClientProvider client={queryClient}>
+        <ColorModeScript />
+        <App />
+      </QueryClientProvider>
     </ChakraProvider>
   </StrictMode>
 );
