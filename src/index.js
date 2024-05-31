@@ -1,9 +1,30 @@
-import { ChakraProvider, ColorModeScript, theme } from '@chakra-ui/react';
+import { ChakraProvider, ColorModeScript, extendTheme } from '@chakra-ui/react';
 import React, { StrictMode } from 'react';
 import * as ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import * as serviceWorker from './serviceWorker';
+import { menuTheme } from './components/Customization/menuTheme';
+
+const colors= {
+  brand: {
+    700: '#2977f2',
+    600: '#337df2',
+  }
+}
+
+const fonts = {
+  body: 'Tohama',
+  heading: 'Courier New'
+}
+
+const components = {
+  Menu: menuTheme,
+}
+
+// const theme = extendTheme({ colors, fonts });
+const theme = extendTheme({ components });
+// const theme = extendTheme();
 
 
 const container = document.getElementById('root');
