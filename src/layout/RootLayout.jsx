@@ -34,7 +34,7 @@ const RootLayout = () => {
             gap={2}
           >
             <ColorModeSwitcher justifySelf="flex-end" />
-            <Button>Logout/Login</Button>
+            <Button>Logout</Button>
           </Flex>
         </Flex>
       </Box>
