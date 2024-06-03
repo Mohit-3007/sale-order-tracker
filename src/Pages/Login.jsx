@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useLayoutEffect } from 'react';
 import {
   Box,
   Button,
@@ -11,7 +11,7 @@ import {
   AlertIcon,
   Stack,
 } from '@chakra-ui/react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Navigate } from 'react-router-dom';
 
 const Login = () => {
   const [formData, setFormData] = useState({
@@ -21,6 +21,15 @@ const Login = () => {
 
   const [errors, setErrors] = useState({});
   const navigate = useNavigate();
+
+  useLayoutEffect(() => {
+    const login = localStorage.getItem('login');
+    console.log(login);
+    if (login === true) {
+      // navigate('/');
+      <Navigate to={'/'} />;
+    }
+  }, []);
 
   const handleChange = e => {
     const { name, value } = e.target;
@@ -75,27 +84,18 @@ const Login = () => {
 
     // If there are no errors, proceed with login
     if (Object.keys(newErrors).length === 0) {
-    //   console.log(formData);
-      //   const localData = localStorage.getItem('user') || [];
-      //   const data = {
-      //     username: formData.username,
-      //     email: formData.email,
-      //     password: formData.password,
-      //   };
-      //   localData.push(data);
-      //   localStorage.setItem('users', JSON.stringify(localData));
       setFormData({
         email: '',
         password: '',
       });
 
       console.log('redirecting to dashboard');
+      localStorage.setItem('login', true);
       navigate('/');
     }
   };
 
   const isValidEmail = email => {
-    // Basic email validation
     const re = /\S+@\S+\.\S+/;
     return re.test(email);
   };

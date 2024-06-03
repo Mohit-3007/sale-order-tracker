@@ -7,24 +7,24 @@ import * as serviceWorker from './serviceWorker';
 import { menuTheme } from './components/Customization/menuTheme';
 import { QueryClient, QueryClientProvider } from 'react-query';
 
-
 const queryClient = new QueryClient();
 const components = {
   Menu: menuTheme,
-}
-const theme = extendTheme({ components });
+};
+// const theme = extendTheme({ components });
+const theme = extendTheme();
 const container = document.getElementById('root');
 const root = ReactDOM.createRoot(container);
 
 root.render(
-  <StrictMode>
-    <ChakraProvider theme={theme}>
-      <QueryClientProvider client={queryClient}>
-        <ColorModeScript />
-        <App />
-      </QueryClientProvider>
-    </ChakraProvider>
-  </StrictMode>
+  // <StrictMode>
+  <ChakraProvider theme={theme}>
+    <QueryClientProvider client={queryClient}>
+      <ColorModeScript />
+      <App />
+    </QueryClientProvider>
+  </ChakraProvider>
+  // </StrictMode>
 );
 
 // If you want your app to work offline and load faster, you can change

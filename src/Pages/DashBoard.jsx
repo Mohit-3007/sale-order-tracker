@@ -26,8 +26,9 @@ import {
   EmailIcon,
   WarningIcon,
 } from '@chakra-ui/icons';
-import TableComponent from '../components/TableComponent';
+import ActiveSaleComponent from '../components/ActiveSaleComponent';
 import SaleForm from '../components/SaleForm';
+import CompletedSaleComponent from '../components/CompletedSaleComponent';
 
 const DashBoard = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -45,28 +46,19 @@ const DashBoard = () => {
 
   return (
     <>
-      <Tabs mt="40px" py="20px" px="40px" colorScheme="purple" variant="styled">
+      <Tabs mt="40px" py="20px" px="40px" colorScheme="teal" variant="styled">
         <TabList>
           <Flex justifyContent="space-between" w="100%">
             <Box display="flex" gap={2}>
-              <Tab
-                _selected={{ color: 'white', bg: 'purple.400' }}
-                sx={tabStyle}
-              >
+              <Tab _selected={{ color: 'white', bg: 'teal.600' }} sx={tabStyle}>
                 Active Sale Orders
               </Tab>
-              <Tab
-                _selected={{ color: 'white', bg: 'purple.400' }}
-                sx={tabStyle}
-              >
+              <Tab _selected={{ color: 'white', bg: 'teal.600' }} sx={tabStyle}>
                 Completed Sale Orders
               </Tab>
             </Box>
             <Box
               onClick={handleModal}
-              // pos="absolute"
-              // right="40px"
-              // top="143px"
               cursor="pointer"
               sx={tabStyle}
               px={4}
@@ -80,13 +72,14 @@ const DashBoard = () => {
 
         <TabPanels>
           <TabPanel p={0}>
-            <TableComponent />
+            <ActiveSaleComponent />
           </TabPanel>
 
-          <TabPanel></TabPanel>
+          <TabPanel p={0}>
+            <CompletedSaleComponent />
+          </TabPanel>
         </TabPanels>
       </Tabs>
-
     </>
   );
 };

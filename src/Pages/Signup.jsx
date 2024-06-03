@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useLayoutEffect, useState } from 'react';
 import {
   Box,
   Button,
@@ -25,12 +25,17 @@ const Signup = () => {
   const [errors, setErrors] = useState({});
   const navigate = useNavigate();
 
+  useLayoutEffect(() => {
+    const login = localStorage.getItem('login');
+    if (login == true) navigate('/');
+  }, []);
+
   const handleChange = e => {
     const { name, value } = e.target;
     setErrors({
       ...errors,
-      [name]: ''
-    })
+      [name]: '',
+    });
     setFormData({
       ...formData,
       [name]: value,
@@ -65,18 +70,18 @@ const Signup = () => {
     }
 
     //check local data
-    if(Object.keys(newErrors).length === 0 && localStorage.getItem('users')){
+    if (Object.keys(newErrors).length === 0 && localStorage.getItem('users')) {
       const users = JSON.parse(localStorage.getItem('users'));
-      console.log(users)
+      console.log(users);
       const isUser = users.find(e => {
-        return e.username === formData.username
-      })
+        return e.username === formData.username;
+      });
       const isEmail = users.find(e => {
-        return e.email === formData.email
-      })
+        return e.email === formData.email;
+      });
 
-      if(isUser) newErrors.username = 'Username is not available';
-      if(isEmail) newErrors.email = 'Email Id already exist';
+      if (isUser) newErrors.username = 'Username is not available';
+      if (isEmail) newErrors.email = 'Email Id already exist';
     }
 
     setErrors(newErrors);
@@ -88,27 +93,25 @@ const Signup = () => {
       const data = {
         username: formData.username,
         email: formData.email,
-        password: formData.password
-      }
+        password: formData.password,
+      };
       localData.push(data);
       localStorage.setItem('users', JSON.stringify(localData));
 
+      setFormData({
+        username: '',
+        email: '',
+        password: '',
+        retypePassword: '',
+      });
 
-    setFormData({
-      username: '',
-      email: '',
-      password: '',
-      retypePassword: ''
-    });
-
-
-    console.log("redirecting to dashboard");
-    navigate('/');
+      console.log('redirecting to dashboard');
+      localStorage.setItem('login', true);
+      navigate('/');
     }
   };
 
   const isValidEmail = email => {
-    // Basic email validation
     const re = /\S+@\S+\.\S+/;
     return re.test(email);
   };
@@ -129,12 +132,12 @@ const Signup = () => {
             />
             {errors.username && (
               <Alert status="error">
-              <AlertIcon />
-              {errors.username}
+                <AlertIcon />
+                {errors.username}
               </Alert>
             )}
           </FormControl>
-            <FormControl mt={4} isInvalid={errors.email}>
+          <FormControl mt={4} isInvalid={errors.email}>
             <FormLabel htmlFor="email">Email</FormLabel>
             <Input
               type="email"
@@ -146,8 +149,8 @@ const Signup = () => {
             />
             {errors.email && (
               <Alert status="error">
-              <AlertIcon />
-              {errors.email}
+                <AlertIcon />
+                {errors.email}
               </Alert>
             )}
           </FormControl>
@@ -163,8 +166,8 @@ const Signup = () => {
             />
             {errors.password && (
               <Alert status="error">
-              <AlertIcon />
-              {errors.password}
+                <AlertIcon />
+                {errors.password}
               </Alert>
             )}
           </FormControl>
@@ -180,17 +183,24 @@ const Signup = () => {
             />
             {errors.retypePassword && (
               <Alert status="error">
-              <AlertIcon />
-              {errors.retypePassword}
+                <AlertIcon />
+                {errors.retypePassword}
               </Alert>
             )}
           </FormControl>
-          <Button mt={4} colorScheme="teal" type="submit">Sign Up</Button>
+          <Button mt={4} colorScheme="teal" type="submit">
+            Sign Up
+          </Button>
         </Stack>
       </form>
       <Text mt={4}>
         If you already have an account,
-        <Link color="blue.500" ml={1} _hover={{ color: "blue.700", textDecoration: "underline" }} href="/login">
+        <Link
+          color="blue.500"
+          ml={1}
+          _hover={{ color: 'blue.700', textDecoration: 'underline' }}
+          href="/login"
+        >
           Login here
         </Link>
       </Text>

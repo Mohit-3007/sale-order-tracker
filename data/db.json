@@ -1,43 +1,164 @@
 {
   "customers": [
     {
-      "id": 9,
-      "customer": 11908,
+      "id": "1",
+      "customer": 1001,
       "customer_profile": {
-        "id": 11908,
-        "name": "Ram",
-        "color": [182, 73, 99]
+        "id": 1001,
+        "name": "Alice",
+        "color": [
+          255,
+          0,
+          0
+        ]
       },
-      "email": "jesus_christ@church.com",
-      "pincode": "Mumbai",
-      "location_name": "Mumbai, Maharashtra, India",
+      "email": "alice@example.com",
+      "pincode": "10001",
+      "location_name": "New York, NY, USA",
       "type": "C",
       "profile_pic": null,
       "gst": ""
     },
     {
-      "id": 9,
-      "customer": 1190,
+      "id": "2",
+      "customer": 1002,
       "customer_profile": {
-        "id": 1190,
-        "name": "Sham",
-        "color": [182, 73, 99]
+        "id": 1002,
+        "name": "Bob",
+        "color": [
+          0,
+          255,
+          0
+        ]
       },
-      "email": "jesus_christ@church.com",
-      "pincode": "Mumbai",
-      "location_name": "Mumbai, Maharashtra, India",
+      "email": "bob@example.com",
+      "pincode": "20002",
+      "location_name": "Los Angeles, CA, USA",
+      "type": "C",
+      "profile_pic": null,
+      "gst": ""
+    },
+    {
+      "id": "3",
+      "customer": 1003,
+      "customer_profile": {
+        "id": 1003,
+        "name": "Charlie",
+        "color": [
+          0,
+          0,
+          255
+        ]
+      },
+      "email": "charlie@example.com",
+      "pincode": "30003",
+      "location_name": "Chicago, IL, USA",
+      "type": "C",
+      "profile_pic": null,
+      "gst": ""
+    },
+    {
+      "id": "4",
+      "customer": 1004,
+      "customer_profile": {
+        "id": 1004,
+        "name": "David",
+        "color": [
+          255,
+          255,
+          0
+        ]
+      },
+      "email": "david@example.com",
+      "pincode": "40004",
+      "location_name": "Houston, TX, USA",
+      "type": "C",
+      "profile_pic": null,
+      "gst": ""
+    },
+    {
+      "id": "5",
+      "customer": 1005,
+      "customer_profile": {
+        "id": 1005,
+        "name": "Emily",
+        "color": [
+          255,
+          0,
+          255
+        ]
+      },
+      "email": "emily@example.com",
+      "pincode": "50005",
+      "location_name": "Phoenix, AZ, USA",
+      "type": "C",
+      "profile_pic": null,
+      "gst": ""
+    },
+    {
+      "id": "6",
+      "customer": 1006,
+      "customer_profile": {
+        "id": 1006,
+        "name": "Frank",
+        "color": [
+          0,
+          255,
+          255
+        ]
+      },
+      "email": "frank@example.com",
+      "pincode": "60006",
+      "location_name": "Philadelphia, PA, USA",
+      "type": "C",
+      "profile_pic": null,
+      "gst": ""
+    },
+    {
+      "id": "7",
+      "customer": 1007,
+      "customer_profile": {
+        "id": 1007,
+        "name": "Grace",
+        "color": [
+          128,
+          128,
+          128
+        ]
+      },
+      "email": "grace@example.com",
+      "pincode": "70007",
+      "location_name": "San Antonio, TX, USA",
+      "type": "C",
+      "profile_pic": null,
+      "gst": ""
+    },
+    {
+      "id": "8",
+      "customer": 1008,
+      "customer_profile": {
+        "id": 1008,
+        "name": "Henry",
+        "color": [
+          192,
+          192,
+          192
+        ]
+      },
+      "email": "henry@example.com",
+      "pincode": "80008",
+      "location_name": "San Diego, CA, USA",
       "type": "C",
       "profile_pic": null,
       "gst": ""
     }
   ],
-
   "product": [
     {
-      "id": 209,
+      "id": "209",
       "display_id": 8,
       "owner": 1079,
-      "name": "New Product",
+      "name": "Laptop",
       "category": "The god of War",
       "characteristics": "New Product Characteristics",
       "features": "",
@@ -73,25 +194,403 @@
       ],
       "updated_on": "2024-05-24T12:46:41.995873Z",
       "adding_date": "2024-05-24T12:46:41.995828Z"
+    },
+    {
+      "id": "210",
+      "display_id": 9,
+      "owner": 1079,
+      "name": "Smartphone",
+      "category": "Electronics",
+      "characteristics": "High-tech, Portable",
+      "features": "5G, OLED Display",
+      "brand": "TechGadget",
+      "sku": [
+        {
+          "id": 249,
+          "selling_price": 899,
+          "max_retail_price": 999,
+          "amount": 100,
+          "unit": "pcs",
+          "quantity_in_inventory": 50,
+          "product": 210
+        },
+        {
+          "id": 250,
+          "selling_price": 1099,
+          "max_retail_price": 1199,
+          "amount": 50,
+          "unit": "pcs",
+          "quantity_in_inventory": 25,
+          "product": 210
+        },
+        {
+          "id": 251,
+          "selling_price": 1299,
+          "max_retail_price": 1399,
+          "amount": 25,
+          "unit": "pcs",
+          "quantity_in_inventory": 10,
+          "product": 210
+        }
+      ],
+      "updated_on": "2024-06-03T12:00:00Z",
+      "adding_date": "2024-06-03T12:00:00Z"
+    },
+    {
+      "id": "211",
+      "display_id": 10,
+      "owner": 1079,
+      "name": "Coffee Maker",
+      "category": "Kitchen Appliances",
+      "characteristics": "Programmable, Stainless Steel",
+      "features": "12-Cup Capacity, Auto Shut-off",
+      "brand": "BrewMaster",
+      "sku": [
+        {
+          "id": 252,
+          "selling_price": 49.99,
+          "max_retail_price": 59.99,
+          "amount": 100,
+          "unit": "pcs",
+          "quantity_in_inventory": 75,
+          "product": 211
+        },
+        {
+          "id": 253,
+          "selling_price": 69.99,
+          "max_retail_price": 79.99,
+          "amount": 50,
+          "unit": "pcs",
+          "quantity_in_inventory": 40,
+          "product": 211
+        },
+        {
+          "id": 254,
+          "selling_price": 89.99,
+          "max_retail_price": 99.99,
+          "amount": 25,
+          "unit": "pcs",
+          "quantity_in_inventory": 15,
+          "product": 211
+        }
+      ],
+      "updated_on": "2024-06-03T12:00:00Z",
+      "adding_date": "2024-06-03T12:00:00Z"
+    },
+    {
+      "id": "212",
+      "display_id": 11,
+      "owner": 1079,
+      "name": "Fitness Tracker",
+      "category": "Fitness & Health",
+      "characteristics": "Waterproof, Heart Rate Monitor",
+      "features": "Activity Tracking, Sleep Monitoring",
+      "brand": "FitTech",
+      "sku": [
+        {
+          "id": 255,
+          "selling_price": 79.99,
+          "max_retail_price": 89.99,
+          "amount": 50,
+          "unit": "pcs",
+          "quantity_in_inventory": 30,
+          "product": 212
+        },
+        {
+          "id": 256,
+          "selling_price": 99.99,
+          "max_retail_price": 109.99,
+          "amount": 25,
+          "unit": "pcs",
+          "quantity_in_inventory": 15,
+          "product": 212
+        },
+        {
+          "id": 257,
+          "selling_price": 119.99,
+          "max_retail_price": 129.99,
+          "amount": 10,
+          "unit": "pcs",
+          "quantity_in_inventory": 5,
+          "product": 212
+        }
+      ],
+      "updated_on": "2024-06-03T12:00:00Z",
+      "adding_date": "2024-06-03T12:00:00Z"
+    },
+    {
+      "id": "213",
+      "display_id": 12,
+      "owner": 1079,
+      "name": "Wireless Headphones",
+      "category": "Electronics",
+      "characteristics": "Noise Cancelling, Bluetooth",
+      "features": "Long Battery Life, Comfortable Design",
+      "brand": "AudioAura",
+      "sku": [
+        {
+          "id": 258,
+          "selling_price": 129.99,
+          "max_retail_price": 149.99,
+          "amount": 50,
+          "unit": "pcs",
+          "quantity_in_inventory": 35,
+          "product": 213
+        },
+        {
+          "id": 259,
+          "selling_price": 149.99,
+          "max_retail_price": 169.99,
+          "amount": 25,
+          "unit": "pcs",
+          "quantity_in_inventory": 20,
+          "product": 213
+        },
+        {
+          "id": 260,
+          "selling_price": 169.99,
+          "max_retail_price": 189.99,
+          "amount": 10,
+          "unit": "pcs",
+          "quantity_in_inventory": 5,
+          "product": 213
+        }
+      ],
+      "updated_on": "2024-06-03T12:00:00Z",
+      "adding_date": "2024-06-03T12:00:00Z"
+    },
+    {
+      "id": "214",
+      "display_id": 13,
+      "owner": 1079,
+      "name": "Smartwatch",
+      "category": "Wearable Technology",
+      "characteristics": "Touchscreen, Fitness Tracking",
+      "features": "Notifications, GPS",
+      "brand": "WearTech",
+      "sku": [
+        {
+          "id": 261,
+          "selling_price": 149.99,
+          "max_retail_price": 169.99,
+          "amount": 50,
+          "unit": "pcs",
+          "quantity_in_inventory": 35,
+          "product": 214
+        },
+        {
+          "id": 262,
+          "selling_price": 169.99,
+          "max_retail_price": 189.99,
+          "amount": 25,
+          "unit": "pcs",
+          "quantity_in_inventory": 20,
+          "product": 214
+        },
+        {
+          "id": 263,
+          "selling_price": 199.99,
+          "max_retail_price": 219.99,
+          "amount": 10,
+          "unit": "pcs",
+          "quantity_in_inventory": 5,
+          "product": 214
+        }
+      ],
+      "updated_on": "2024-06-03T12:00:00Z",
+      "adding_date": "2024-06-03T12:00:00Z"
+    },
+    {
+      "id": "215",
+      "display_id": 14,
+      "owner": 1079,
+      "name": "Robot Vacuum Cleaner",
+      "category": "Home Appliances",
+      "characteristics": "Smart Navigation, Self-Charging",
+      "features": "HEPA Filter, Remote Control",
+      "brand": "CleanBot",
+      "sku": [
+        {
+          "id": 264,
+          "selling_price": 199.99,
+          "max_retail_price": 249.99,
+          "amount": 50,
+          "unit": "pcs",
+          "quantity_in_inventory": 40,
+          "product": 215
+        },
+        {
+          "id": 265,
+          "selling_price": 299.99,
+          "max_retail_price": 349.99,
+          "amount": 25,
+          "unit": "pcs",
+          "quantity_in_inventory": 20,
+          "product": 215
+        },
+        {
+          "id": 266,
+          "selling_price": 399.99,
+          "max_retail_price": 449.99,
+          "amount": 10,
+          "unit": "pcs",
+          "quantity_in_inventory": 5,
+          "product": 215
+        }
+      ],
+      "updated_on": "2024-06-03T12:00:00Z",
+      "adding_date": "2024-06-03T12:00:00Z"
+    },
+    {
+      "id": "216",
+      "display_id": 15,
+      "owner": 1079,
+      "name": "Digital Camera",
+      "category": "Electronics",
+      "characteristics": "High Resolution, Compact",
+      "features": "Zoom Lens, Image Stabilization",
+      "brand": "PhotoPro",
+      "sku": [
+        {
+          "id": 267,
+          "selling_price": 299.99,
+          "max_retail_price": 349.99,
+          "amount": 50,
+          "unit": "pcs",
+          "quantity_in_inventory": 40,
+          "product": 216
+        },
+        {
+          "id": 268,
+          "selling_price": 399.99,
+          "max_retail_price": 449.99,
+          "amount": 25,
+          "unit": "pcs",
+          "quantity_in_inventory": 20,
+          "product": 216
+        },
+        {
+          "id": 269,
+          "selling_price": 499.99,
+          "max_retail_price": 549.99,
+          "amount": 10,
+          "unit": "pcs",
+          "quantity_in_inventory": 5,
+          "product": 216
+        }
+      ],
+      "updated_on": "2024-06-03T12:00:00Z",
+      "adding_date": "2024-06-03T12:00:00Z"
+    },
+    {
+      "id": "217",
+      "display_id": 16,
+      "owner": 1079,
+      "name": "Gaming Console",
+      "category": "Electronics",
+      "characteristics": "High Performance, Immersive Gaming",
+      "features": "4K HDR, Online Multiplayer",
+      "brand": "GameMaster",
+      "sku": [
+        {
+          "id": 270,
+          "selling_price": 399.99,
+          "max_retail_price": 449.99,
+          "amount": 50,
+          "unit": "pcs",
+          "quantity_in_inventory": 40,
+          "product": 217
+        },
+        {
+          "id": 271,
+          "selling_price": 499.99,
+          "max_retail_price": 549.99,
+          "amount": 25,
+          "unit": "pcs",
+          "quantity_in_inventory": 20,
+          "product": 217
+        },
+        {
+          "id": 272,
+          "selling_price": 599.99,
+          "max_retail_price": 649.99,
+          "amount": 10,
+          "unit": "pcs",
+          "quantity_in_inventory": 5,
+          "product": 217
+        }
+      ],
+      "updated_on": "2024-06-03T12:00:00Z",
+      "adding_date": "2024-06-03T12:00:00Z"
+    },
+    {
+      "id": "218",
+      "display_id": 17,
+      "owner": 1079,
+      "name": "Electric Toothbrush",
+      "category": "Personal Care",
+      "characteristics": "Sonic Technology, Timer",
+      "features": "Whitening Mode, Travel Case",
+      "brand": "DentaClean",
+      "sku": [
+        {
+          "id": 273,
+          "selling_price": 49.99,
+          "max_retail_price": 59.99,
+          "amount": 100,
+          "unit": "pcs",
+          "quantity_in_inventory": 80,
+          "product": 218
+        },
+        {
+          "id": 274,
+          "selling_price": 69.99,
+          "max_retail_price": 79.99,
+          "amount": 50,
+          "unit": "pcs",
+          "quantity_in_inventory": 40,
+          "product": 218
+        },
+        {
+          "id": 275,
+          "selling_price": 89.99,
+          "max_retail_price": 99.99,
+          "amount": 25,
+          "unit": "pcs",
+          "quantity_in_inventory": 20,
+          "product": 218
+        }
+      ],
+      "updated_on": "2024-06-03T12:00:00Z",
+      "adding_date": "2024-06-03T12:00:00Z"
     }
   ],
-
   "saleOrder": [
     {
-      "customer_id": 11908,
+      "id": "1",
+      "customer_id": 1001,
       "items": [
         {
           "sku_id": 220,
-          "price": 12,
+          "price": 1222,
           "quantity": 12
+        },
+        {
+          "sku_id": 420,
+          "price": 17,
+          "quantity": 14
         }
       ],
       "paid": false,
+      "payment_date": null,
       "invoice_no": "Invoice - 1212121",
-      "invoice_date": "7/5/2024"
+      "invoice_date": "7/5/2024",
+      "modified": true,
+      "modified_date": "6/3/2024"
     },
     {
-      "customer_id": 1190,
+      "id": "2",
+      "customer_id": 1002,
       "items": [
         {
           "sku_id": 220,
@@ -101,7 +600,228 @@
       ],
       "paid": false,
       "invoice_no": "Invoice - 121211",
-      "invoice_date": "7/5/2024"
+      "invoice_date": "17/4/2024",
+      "modified": false,
+      "modified_date": null
+    },
+    {
+      "id": "3",
+      "customer_id": 1003,
+      "items": [
+        {
+          "sku_id": 220,
+          "price": 12245,
+          "quantity": 16
+        },
+        {
+          "sku_id": 420,
+          "price": 12245,
+          "quantity": 16
+        }
+      ],
+      "paid": true,
+      "payment_date": "6/2/2024",
+      "invoice_no": "Invoice - 1212121",
+      "invoice_date": "4/4/2024",
+      "modified": false,
+      "modified_date": null
+    },
+    {
+      "id": "4",
+      "customer_id": 1004,
+      "items": [
+        {
+          "sku_id": 220,
+          "price": 10,
+          "quantity": 12
+        }
+      ],
+      "paid": true,
+      "payment_date": "6/2/2024",
+      "invoice_no": "Invoice - 121211",
+      "invoice_date": "22/3/2024",
+      "modified": false,
+      "modified_date": null
+    },
+    {
+      "id": "5",
+      "customer_id": 1005,
+      "items": [
+        {
+          "sku_id": 220,
+          "price": 12245,
+          "quantity": 16
+        },
+        {
+          "sku_id": 420,
+          "price": 12245,
+          "quantity": 16
+        }
+      ],
+      "paid": true,
+      "payment_date": "6/2/2024",
+      "invoice_no": "Invoice - 1212121",
+      "invoice_date": "19/5/2024",
+      "modified": false,
+      "modified_date": null
+    },
+    {
+      "id": "6",
+      "customer_id": 1006,
+      "items": [
+        {
+          "sku_id": 220,
+          "price": 10,
+          "quantity": 12
+        }
+      ],
+      "paid": true,
+      "payment_date": "6/2/2024",
+      "invoice_no": "Invoice - 121211",
+      "invoice_date": "7/5/2024",
+      "modified": false,
+      "modified_date": null
+    },
+    {
+      "id": "7",
+      "customer_id": 1007,
+      "items": [
+        {
+          "sku_id": 220,
+          "price": 10,
+          "quantity": 12
+        }
+      ],
+      "paid": true,
+      "payment_date": "6/2/2024",
+      "invoice_no": "Invoice - 121211",
+      "invoice_date": "7/5/2024",
+      "modified": false,
+      "modified_date": null
+    },
+    {
+      "id": "03ad1478-d125-49be-8db0-724e56e062ae",
+      "customer_id": 1004,
+      "items": [
+        {
+          "sku_id": 255,
+          "price": 85,
+          "quantity": 10
+        }
+      ],
+      "paid": false,
+      "payment_date": null,
+      "invoice_no": "Invoice + 5379263",
+      "invoice_date": "7/02/2024",
+      "modified": false,
+      "modified_date": null
+    },
+    {
+      "id": "3a46ad9d-f07a-4efc-b50c-06f3e31924fb",
+      "customer_id": 1006,
+      "items": [
+        {
+          "sku_id": 253,
+          "price": 343,
+          "quantity": 10
+        }
+      ],
+      "paid": false,
+      "payment_date": null,
+      "invoice_no": "Invoice + 1853791",
+      "invoice_date": "7/02/2024",
+      "modified": false,
+      "modified_date": null
+    },
+    {
+      "id": "6e4ab056-9c72-4031-97f9-cbbdd28f8f03",
+      "customer_id": 1007,
+      "items": [
+        {
+          "sku_id": 271,
+          "price": 3,
+          "quantity": 10
+        }
+      ],
+      "paid": true,
+      "payment_date": "6/3/2024",
+      "invoice_no": "Invoice + 6559280",
+      "invoice_date": "7/02/2024",
+      "modified": false,
+      "modified_date": null
+    },
+    {
+      "id": "e3887a0a-3936-47a7-b8b5-f471c5101d7b",
+      "customer_id": 1008,
+      "items": [
+        {
+          "sku_id": 263,
+          "price": 45,
+          "quantity": 10
+        }
+      ],
+      "paid": true,
+      "payment_date": "6/02/2024",
+      "invoice_no": "Invoice + 6549473",
+      "invoice_date": "7/02/2024",
+      "modified": false,
+      "modified_date": null
+    },
+    {
+      "id": "36d963dc-b1b1-4efa-908f-008f237f84f2",
+      "customer_id": 1006,
+      "items": [
+        {
+          "sku_id": 258,
+          "price": 45,
+          "quantity": 10
+        }
+      ],
+      "paid": false,
+      "payment_date": null,
+      "invoice_no": "Invoice + 7012753",
+      "invoice_date": "7/02/2024",
+      "modified": false,
+      "modified_date": null
+    },
+    {
+      "id": "25a9ad88-9253-4d6e-a3b2-38bd3c026eb7",
+      "customer_id": 1003,
+      "items": [
+        {
+          "sku_id": 258,
+          "price": 345,
+          "quantity": 10
+        }
+      ],
+      "paid": false,
+      "payment_date": null,
+      "invoice_no": "Invoice + 4851452",
+      "invoice_date": "7/02/2024",
+      "modified": false,
+      "modified_date": null
+    },
+    {
+      "id": "47607a8f-71c0-4ef2-89d3-7401608ed6bc",
+      "customer_id": 1003,
+      "items": [
+        {
+          "sku_id": 253,
+          "price": 667,
+          "quantity": 10
+        },
+        {
+          "sku_id": 270,
+          "price": 67,
+          "quantity": 10
+        }
+      ],
+      "paid": false,
+      "payment_date": null,
+      "invoice_no": "Invoice - 6691592",
+      "invoice_date": "06/1/2024",
+      "modified": false,
+      "modified_date": null
     }
   ]
 }
