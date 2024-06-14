@@ -15,7 +15,7 @@ import Login from './Pages/Login';
 function ProtectedRoute({ children }) {
   const login = localStorage.getItem('login');
   console.log(login);
-  if (login == true) {
+  if (login === true) {
     return <Navigate to={'/'} />;
   }
   return children;
