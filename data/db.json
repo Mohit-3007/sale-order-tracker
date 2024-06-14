@@ -710,8 +710,8 @@
           "quantity": 10
         }
       ],
-      "paid": false,
-      "payment_date": null,
+      "paid": true,
+      "payment_date": "6/14/2024",
       "invoice_no": "Invoice + 5379263",
       "invoice_date": "7/02/2024",
       "modified": false,
@@ -850,6 +850,23 @@
       "invoice_date": "06/11/2024",
       "modified": true,
       "modified_date": "6/4/2024"
+    },
+    {
+      "id": "d2fa3a36-5f4c-40a9-b81e-920ac84ce850",
+      "customer_id": 1008,
+      "items": [
+        {
+          "sku_id": 264,
+          "price": 5000,
+          "quantity": 10
+        }
+      ],
+      "paid": false,
+      "payment_date": null,
+      "invoice_no": "Invoice - 3964760",
+      "invoice_date": "06/18/2024",
+      "modified": false,
+      "modified_date": null
     }
   ]
 }

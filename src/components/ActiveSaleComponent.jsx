@@ -224,8 +224,8 @@ function ViewModal({ isOpen, onClose, dataa, renderItems, queryClient }) {
 
   useEffect(() => {
     const values = Object.values(disabled);
-    const isFalse = values.find(e => e == false);
-    if (isFalse == false) setMakeDisable(false);
+    const isFalse = values.find(e => e === false);
+    if (isFalse === false) setMakeDisable(false);
     else {
       setUpdateTrigger(false);
       setMakeDisable(true);
@@ -414,13 +414,13 @@ function SkuRow({
 
   // Function to update item quantity
   const updateQuantity = (index, newQuantity) => {
-    if (newQuantity == NaN) return;
+    if (newQuantity === NaN) return;
     setQuantity(newQuantity);
   };
 
   // Function to update item price
   const updatePrice = (index, newPrice) => {
-    if (newPrice == NaN) return;
+    if (newPrice === NaN) return;
     setPrice(newPrice);
   };
 

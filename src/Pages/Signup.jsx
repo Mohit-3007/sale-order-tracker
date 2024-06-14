@@ -27,7 +27,7 @@ const Signup = () => {
 
   useLayoutEffect(() => {
     const login = localStorage.getItem('login');
-    if (login == true) navigate('/');
+    if (login === true) navigate('/');
   }, []);
 
   const handleChange = e => {

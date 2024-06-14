@@ -392,7 +392,7 @@ function ProductComponent({
     const skuId = event.target.value;
     console.log('event.target.value ', event.target.value);
     console.log(availableSkuID);
-    const selectedSkuId = availableSkuID.find(sku => sku.id == skuId);
+    const selectedSkuId = availableSkuID.find(sku => sku.id === skuId);
     console.log(selectedSkuId);
     const updatedAvailableSkuIds = availableSkuID.filter(
       sku => sku.id != skuId
@@ -548,13 +548,13 @@ function SkuComponent({
 
   // Function to update item quantity
   const updateQuantity = (index, newQuantity) => {
-    if (newQuantity == NaN) return;
+    if (newQuantity === NaN) return;
     setQuantity(newQuantity);
   };
 
   // Function to update item price
   const updatePrice = (index, newPrice) => {
-    if (newPrice == NaN) return;
+    if (newPrice === NaN) return;
     setPrice(newPrice);
   };
 

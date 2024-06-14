@@ -1,6 +1,6 @@
 import React from 'react';
 import { fetchCustomer } from '../api/salesApi';
-import { useQuery, ut } from 'react-query';
+import { useQuery } from 'react-query';
 
 export const CustomerName = ({ id }) => {
   const { data: customer } = useQuery({

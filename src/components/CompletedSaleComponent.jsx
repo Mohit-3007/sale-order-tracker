@@ -58,7 +58,7 @@ const CompletedSaleComponent = () => {
   useEffect(() => {
     // console.log(data);
     const filteredData = data?.filter(order => {
-      return order.paid == true;
+      return order.paid === true;
     });
     setOrders(filteredData);
   }, [data]);
