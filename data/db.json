@@ -594,15 +594,16 @@
       "items": [
         {
           "sku_id": 220,
-          "price": 10,
+          "price": 1000,
           "quantity": 12
         }
       ],
-      "paid": false,
+      "paid": true,
       "invoice_no": "Invoice - 121211",
       "invoice_date": "17/4/2024",
-      "modified": false,
-      "modified_date": null
+      "modified": true,
+      "modified_date": "6/4/2024",
+      "payment_date": "6/4/2024"
     },
     {
       "id": "3",
@@ -822,6 +823,33 @@
       "invoice_date": "06/1/2024",
       "modified": false,
       "modified_date": null
+    },
+    {
+      "id": "95cc8328-81c8-413e-bb8a-d450f2650677",
+      "customer_id": 1005,
+      "items": [
+        {
+          "sku_id": 251,
+          "price": 346,
+          "quantity": 10
+        },
+        {
+          "sku_id": 261,
+          "price": 566,
+          "quantity": 10
+        },
+        {
+          "sku_id": 263,
+          "price": 87,
+          "quantity": 100
+        }
+      ],
+      "paid": false,
+      "payment_date": null,
+      "invoice_no": "Invoice - 6746445",
+      "invoice_date": "06/11/2024",
+      "modified": true,
+      "modified_date": "6/4/2024"
     }
   ]
 }

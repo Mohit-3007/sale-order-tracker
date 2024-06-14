@@ -6,11 +6,14 @@ import {
   Button,
   useColorMode,
 } from '@chakra-ui/react';
-import { Outlet } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
 import { ColorModeSwitcher } from '../components/ColorModeSwitcher';
 
 const RootLayout = () => {
   const { colorMode } = useColorMode();
+  const location = useLocation();
+
+  console.log(location);
 
   return (
     <Box overflowX="hidden">
@@ -34,7 +37,8 @@ const RootLayout = () => {
             gap={2}
           >
             <ColorModeSwitcher justifySelf="flex-end" />
-            <Button>Logout</Button>
+            {location.pathname !== '/signup' &&
+              location.pathname !== '/login' && <Button>Logout</Button>}
           </Flex>
         </Flex>
       </Box>
